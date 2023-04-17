@@ -5,10 +5,10 @@ const PokeInfo: React.FC<{
   pokemonName: string
   pokemonImg: string
   pokemonDesc: string
-}> = props => {
+}> = (props) => {
   return (
     <Card
-      img={props.pokemonName}
+      img={props.pokemonImg}
       title={props.pokemonName}
       alt={props.pokemonName}
     >

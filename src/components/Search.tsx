@@ -16,11 +16,11 @@ const Search: React.FC<{
 
   return (
     <form>
-      <input type="text" ref={inputRef} className="form-control" />
+      <input type='text' ref={inputRef} className='form-control' />
       <button
-        type="submit"
+        type='submit'
         onClick={fetchPokemonHandler}
-        className="btn btn-primary"
+        className='btn btn-primary'
       >
         Search
       </button>
