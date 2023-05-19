@@ -23,9 +23,9 @@ const App = () => {
   return (
     <div className='App'>
       {!pokemon && (
-        <header className='display-1 m-5 text-center'>PokeList</header>
+        <header className='display-1 my-5 text-center'>PokeList</header>
       )}
-      {pokemon && <header className='h1'>PokeList</header>}
+      {pokemon && <header className='h1 container'>PokeList</header>}
       <main>
         <Search onSubmit={getPokemon} />
         {pokemon && (
