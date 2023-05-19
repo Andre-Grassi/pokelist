@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import capitalizeFirstLetter from './helpers/capitalizeFirstLetter'
 
 const Card: React.FC<{
   children: React.ReactNode
@@ -18,7 +19,9 @@ const Card: React.FC<{
         />
       )}
       <div className='card-body mx-5'>
-        <div className='card-title text-center'>{props.title}</div>
+        <div className='card-title text-center'>
+          {capitalizeFirstLetter(props.title)}
+        </div>
         <div className='card-text text-start'>
           <ul>
             <li>HP: {pokemonStats.hp}</li>
