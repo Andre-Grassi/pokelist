@@ -1,9 +1,13 @@
+import { useEffect } from 'react'
+
 const Card: React.FC<{
   children: React.ReactNode
   title: string
   img: string
   alt: string
 }> = props => {
+  let pokemonStats = JSON.parse(props.children as string)
+
   return (
     <div className='card container-sm'>
       {props.img && (
@@ -15,7 +19,13 @@ const Card: React.FC<{
       )}
       <div className='card-body mx-5'>
         <div className='card-title text-center'>{props.title}</div>
-        <p className='card-text text-start'>{props.children}</p>
+        <div className='card-text text-start'>
+          <ul>
+            <li>HP: {pokemonStats.hp}</li>
+            <li>Attack: {pokemonStats.attack}</li>
+            <li>Defense: {pokemonStats.defense}</li>
+          </ul>
+        </div>
       </div>
     </div>
   )
