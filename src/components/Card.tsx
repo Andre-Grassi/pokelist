@@ -5,11 +5,13 @@ const Card: React.FC<{
   alt: string
 }> = props => {
   return (
-    <div className="card">
-      {props.img && <img src={props.img} alt={props.alt} />}
-      <div className="card-body">
-        <div className="card-title">{props.title}</div>
-        <p className="card-text">{props.children}</p>
+    <div className='card'>
+      {props.img && (
+        <img src={props.img} alt={props.alt} className='card-img-top' />
+      )}
+      <div className='card-body'>
+        <div className='card-title'>{props.title}</div>
+        <p className='card-text'>{props.children}</p>
       </div>
     </div>
   )
