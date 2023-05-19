@@ -10,6 +10,13 @@ const Search: React.FC<{
     event.preventDefault()
     // "await" waits for the function to return and then continue the next lines
     const pokemon = await fetchPokemon(inputRef.current!.value)
+
+    // Clean the input
+    inputRef.current!.value = ''
+
+    // Remove the focus
+    inputRef.current!.blur()
+
     console.log(pokemon)
     props.onSubmit(pokemon)
   }
