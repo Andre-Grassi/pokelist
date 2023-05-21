@@ -1,5 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import capitalizeFirstLetter from './helpers/capitalizeFirstLetter'
+import getPokemonColor from './helpers/grabColor/getPokemonColor'
 
 const Card: React.FC<{
   children: React.ReactNode
@@ -7,7 +8,13 @@ const Card: React.FC<{
   img: string
   alt: string
 }> = props => {
-  let pokemonStats = JSON.parse(props.children as string)
+  const pokemonStats = JSON.parse(props.children as string)
+  const imgRef = useRef<HTMLImageElement>(null)
+  useEffect(() => {
+    return () => {
+      const pokemonColor = getPokemonColor(imgRef.current!)
+    }
+  }, [props.img])
 
   return (
     <div className='card container-sm col-12 col-sm-6 col-lg-4'>
@@ -15,6 +22,7 @@ const Card: React.FC<{
         <img
           src={props.img}
           alt={props.alt}
+          ref={imgRef}
           className='card-img-top w-50 mx-auto border-bottom'
         />
       )}
