@@ -22,7 +22,7 @@ const Search: React.FC<{
   }
 
   return (
-    <form className='d-flex justify-content-center gap-3 m-2'>
+    <form className='d-flex justify-content-center gap-3 mx-auto my-2 col-12 col-sm-6 col-lg-4'>
       <input type='text' ref={inputRef} className='form-control w-50' />
       <button
         type='submit'
