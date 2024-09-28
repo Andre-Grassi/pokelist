@@ -1,7 +1,7 @@
 async function fetchPokemon(pokemonName: string = '') {
   let pokemon: any
   // será que da pra colocar um return dentro do último then e fazer return const pokemon = await fetch(...) [acho que daí nem precisa do await]
-  await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+  await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`)
     .then(response => {
       return response.json()
     })
