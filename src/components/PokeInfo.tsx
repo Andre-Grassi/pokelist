@@ -1,11 +1,10 @@
-import { useEffect } from 'react'
 import Card from './Card'
 
 const PokeInfo: React.FC<{
   pokemonName: string
   pokemonImg: string
   pokemonDesc: string
-}> = (props) => {
+}> = props => {
   return (
     <Card
       img={props.pokemonImg}

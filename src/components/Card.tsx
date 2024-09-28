@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import capitalizeFirstLetter from './helpers/capitalizeFirstLetter'
 
 const Card: React.FC<{
