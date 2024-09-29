@@ -1,3 +1,9 @@
+# Pokelist
+
+This project is a web app made with React, Typescript and Bootstrap 5.
+
+It's an app, feeded by PokéAPI, where you can search for an specific Pokémon and its information will be displayed, 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
