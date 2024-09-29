@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/pokelist/static/js/main.5528e176.js",
+    "static/js/787.acf7a9bd.chunk.js": "/pokelist/static/js/787.acf7a9bd.chunk.js",
+    "index.html": "/pokelist/index.html",
+    "main.5528e176.js.map": "/pokelist/static/js/main.5528e176.js.map",
+    "787.acf7a9bd.chunk.js.map": "/pokelist/static/js/787.acf7a9bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.5528e176.js"
+  ]
+}
